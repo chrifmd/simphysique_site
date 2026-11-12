@@ -31,7 +31,7 @@ nav{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}nav a{color:var(
 
 /* Bande défilante (Ticker) */
 .ticker-wrap{background:linear-gradient(90deg,var(--teal),var(--mint));color:var(--ink);font-weight:500;padding:12px 0;overflow:hidden;border-radius:16px;margin:24px 0;box-shadow:0 4px 12px rgba(11,122,113,.15)}
-.ticker{display:inline-flex;white-space:nowrap;animation:ticker 25s linear infinite}
+.ticker{display:inline-flex;white-space:nowrap;animation:ticker 40s linear infinite}
 .ticker span{padding-right:60px}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -92,6 +92,12 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 .btn-accept{background:var(--teal);color:#fff;font-weight:500}
 .btn-deny{background:#E2E8F0;color:var(--ink)}
 
+/* Bouton retour en haut */
+.to-top{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;border:0;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(14,23,38,.25);z-index:9998;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,visibility .3s,background .2s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--ink);transform:translateY(-3px)}
+.to-top svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+
 @media(max-width:980px){.banner{grid-template-columns:auto 1fr}.banner .fig{grid-column:1/-1}.layout{grid-template-columns:1fr}.side{position:static;order:-1}}
 @media(max-width:560px){.banner{grid-template-columns:1fr;justify-items:center;text-align:center;padding:24px 20px}.wrap{padding:0 16px}.panel{padding:24px 18px}}
 @media(prefers-reduced-motion:reduce){*,::after{animation:none!important;transition:none!important}}
@@ -110,6 +116,12 @@ img {
 <symbol id="i-square" viewBox="0 0 48 48"><path d="M4 36h9V12h11v24h11V12h9"/></symbol>
 <symbol id="i-decay" viewBox="0 0 48 48"><path d="M6 6v36h36M10 10c5 22 14 26 30 28"/></symbol>
 <symbol id="i-flask" viewBox="0 0 48 48"><path d="M18 5h12M20 5v15L8 40a3 3 0 0 0 3 4h26a3 3 0 0 0 3-4L28 20V5M13 33h22"/></symbol>
+<!-- Icône Conductimétrie : cellule conductimétrique (deux plaques) plongée dans une solution ionique -->
+<symbol id="i-conducto" viewBox="0 0 48 48"><path d="M6 22v16a5 5 0 0 0 5 5h26a5 5 0 0 0 5-5V22"/><path d="M19 3h10v15H19z"/><path d="M22 18v14M26 18v14"/><path d="M24 3V1"/><circle cx="12" cy="30" r="1.6"/><circle cx="36" cy="33" r="1.6"/><circle cx="14" cy="38" r="1.6"/><circle cx="34" cy="26" r="1.6"/><path d="M6 29h2M40 29h2" stroke-width="2"/></symbol>
+<!-- Icône Piles électrochimiques : deux demi-piles (béchers + électrodes) reliées par un pont salin -->
+<symbol id="i-pile" viewBox="0 0 48 48"><path d="M5 26v13a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V26M27 26v13a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V26"/><path d="M10 6v26M38 6v26"/><path d="M15 29V19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v10"/><path d="M6 8h8M34 8h8M38 4v8" stroke-width="2"/></symbol>
+<!-- Icône Électrolyse : cuve à deux électrodes reliées à un générateur, avec bulles de gaz -->
+<symbol id="i-electro" viewBox="0 0 48 48"><path d="M6 20v18a5 5 0 0 0 5 5h26a5 5 0 0 0 5-5V20"/><path d="M16 12v24M32 12v24"/><path d="M16 12V5h6M26 5h6v7"/><path d="M22 2v6M26 3.5v3"/><circle cx="24" cy="32" r="1.6"/><circle cx="25" cy="24" r="1.6"/><circle cx="10.5" cy="30" r="1.4"/><circle cx="37.5" cy="26" r="1.4"/></symbol>
 <!-- Icône Conversion des signaux (CAN / CNA) : bloc convertisseur « A / D » avec entrée et sortie -->
 <symbol id="i-adc-dac" viewBox="0 0 48 48"><rect x="9" y="8" width="30" height="32" rx="3"/><path d="M39 8L9 40"/><path d="M3 18h6M3 30h6M39 24h6"/><path d="M12 22l4.5-9 4.5 9M14 19h5"/><path d="M28 26v10h3a5 5 0 0 0 0-10z"/></symbol>
 <!-- Icône Modulation / Démodulation : porteuse HF enfermée dans son enveloppe (signal modulé en amplitude) -->
@@ -153,12 +165,13 @@ img {
     <span>✨ **Dernière mise à jour :** Ajout des similateurs convertisseur CNA à n bits et modulation et démodulation d'amplitude pour la section informatiques· </span>
     <span>✨**Dernière mise à jour :** Ajout des similateurs: Réactions acide-base - des quiz sur tous les thèmes traités. · </span>
     <span>✨ **Dernière mise à jour :** Ajout des similateurs: onde progressive le long d'une corde; mise à jour de l'onde à la surface de l'eau, onde sonore et interactions onde-matière. · </span>
-     <span>✨ **Dernière mise à jour :** Cours interactif : Noyau atomique et réactions nucléaires. · </span>
-  <span>🚀 Explorez dès maintenant toutes les simulations interactives de physique et de chimie pour les classes terminales ! · </span>
-        <span>✨ **Dernière mise à jour :** Intégration d'un plan de site complet, correctif des icônes de simulations et ajout d'un bandeau de consentement aux cookies. · </span>
+    <span>✨ **Dernière mise à jour :** Cours interactif : noyau atomique, radioactivité, fission et fusion. · </span>
+       <span>🚀 Explorez dès maintenant toutes les simulations interactives de physique et de chimie pour les classes terminales ! · </span>
+    <span>✨ **Dernière mise à jour :** Intégration d'un plan de site complet, correctif des icônes de simulations et ajout d'un bandeau de consentement aux cookies. · </span>
     <span>🚀 Explorez dès maintenant toutes les simulations interactives de physique et de chimie pour les classes terminales ! · </span>
-         </div>
+  </div>
 </div>
+
 <div class="layout"><main>
 <section class="panel" id="accueil"><h2>La présentation du site</h2>
 <p>Simphysique réunit des simulations interactives pour comprendre la physique et la chimie du programme de terminale. Modifiez une valeur, observez aussitôt le résultat et reliez le cours à l’expérience. Chaque carte indique la ou les sections concernées.</p><div class="acts"><a class="btn" href="#simulations">Explorer les simulations</a><a class="btn2" href="#methode">Voir comment ça marche</a></div></section>
@@ -175,7 +188,7 @@ img {
   <a class="card" href="https://chrifmd.github.io/filtres/index" style="--bg:#E7B3E3" data-k="filtres"><svg class="ic flow" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-filter"/></svg><h4>Les filtres</h4><span class="foot"><span class="chip">Tech. et Sc.Info</span><span class="go">Ouvrir ›</span></span></a>
   <a class="card" href="https://chrifmd.github.io/multivibrateurs/" style="--bg:#FFF0B3" data-k="multivibrateurs"><svg class="ic flow" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-square"/></svg><h4>Les multivibrateurs</h4><span class="foot"><span class="chip">Sc.Info.</span><span class="go">Ouvrir ›</span></span></a>
   <a class="card" href="https://chrifmd.github.io/sys_electriques/sys_electriques/C_N_A_n_bits" style="--bg:#E2F0D9" data-k="conversion signaux can cna echantillonnage"><svg class="ic pulse" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-adc-dac"/></svg><h4>Conversion des signaux</h4><span class="foot"><span class="chip">Sc.Info. </span><span class="go">Ouvrir ›</span></span></a>
-  <a class="card" href="https://chrifmd.github.io/onde/modulation" style="--bg:#FCE4D6" data-k="modulation demodulation amplitude porteuse signal"><svg class="ic flow" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-modulation"/></svg><h4>Modulation et démodulation des signaux</h4><span class="foot"><span class="chip">Sc.Info</span><span class="go">Ouvrir ›</span></span></a>
+  <a class="card" href="https://chrifmd.github.io/onde/modulation" style="--bg:#FCE4D6" data-k="modulation demodulation amplitude porteuse signal"><svg class="ic flow" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-modulation"/></svg><h4>Modulation et démodulation des signaux</h4><span class="foot"><span class="chip">Tech. et Sc.Info</span><span class="go">Ouvrir ›</span></span></a>
 </div>
 <h3 id="chimie">Chimie</h3><div class="grid"><a class="card" href="https://chrifmd.github.io/Chimie/tp_cinetique" style="--bg:#BFEBE4" data-k="cinétique chimique TP"><svg class="ic flow" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-decay"/></svg><h4>TP Cinétique chimique</h4><span class="foot"><span class="chip">Maths et Sc.Exp.</span><span class="go">Ouvrir ›</span></span></a><a class="card" href="https://chrifmd.github.io/Chimie/esterification" style="--bg:#D9D2F5" data-k="estérification TP"><svg class="ic tilt" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-flask"/></svg><h4>TP Réaction d’estérification</h4><span class="foot"><span class="chip">Maths et Sc.Exp.</span><span class="go">Ouvrir ›</span></span></a><a class="card" href="https://chrifmd.github.io/Chimie/index" style="--bg:#b1d66b" data-k="acide-base"><svg class="ic tilt" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <!-- Axes du repère -->
@@ -189,7 +202,7 @@ img {
     <path d="M24 24v16" stroke-dasharray="1 2" stroke-width="1.5" />
     <path d="M8 24h16" stroke-dasharray="1 2" stroke-width="1.5" />
     <circle cx="24" cy="24" r="1.5" fill="currentColor" />
-</svg><h4>Réactions acide-base</h4><span class="foot"><span class="chip">Maths et Sc.Exp.</span><span class="go">Ouvrir ›</span></span></a></div>
+</svg><h4>Réactions acide-base</h4><span class="foot"><span class="chip">Maths et Sc.Exp.</span><span class="go">Ouvrir ›</span></span></a><a class="card" href="https://chrifmd.github.io/Chimie/conductimetrie" style="--bg:#C4E3F7" data-k="conductimétrie conductimetrie conductivité conductance ions solution dosage conductimétrique"><svg class="ic pulse" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-conducto"/></svg><h4>Conductimétrie</h4><span class="foot"><span class="chip">Tech. et Sc.Info</span><span class="go">Ouvrir ›</span></span></a><a class="card" href="https://chrifmd.github.io/Chimie/pile-daniell" style="--bg:#FFD9A8" data-k="piles électrochimiques pile Daniell oxydoréduction pont salin électrodes"><svg class="ic pulse" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-pile"/></svg><h4>Piles électrochimiques</h4><span class="foot"><span class="chip">toute section</span><span class="go">Ouvrir ›</span></span></a><a class="card" href="https://chrifmd.github.io/Chimie/electrolyses" style="--bg:#F8C8DC" data-k="électrolyse electrolyse électrodes anode cathode transformation forcée"><svg class="ic flow" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-electro"/></svg><h4>Électrolyses</h4><span class="foot"><span class="chip">Tech. et Sc.Info</span><span class="go">Ouvrir ›</span></span></a></div>
 <p id="none" hidden>Aucune simulation ne correspond à votre recherche.</p></section>
 
 <h3 style="color: #012741;">Application android:</h3>
@@ -230,6 +243,9 @@ img {
         <li><a href="https://chrifmd.github.io/Chimie/cinetique">Facteurs cinétiques</a></li>
         <li><a href="https://chrifmd.github.io/Chimie/esterification">Réaction d'estérification</a></li>
         <li><a href="https://chrifmd.github.io/Chimie/index">Réactions acide-base</a></li>
+        <li><a href="https://chrifmd.github.io/Chimie/conductimetrie">Conductimétrie</a></li>
+        <li><a href="https://chrifmd.github.io/Chimie/pile-daniell">Piles électrochimiques</a></li>
+        <li><a href="https://chrifmd.github.io/Chimie/electrolyses">Électrolyses</a></li>
       </ul>
     </div>
     <div class="sitemap-col">
@@ -262,7 +278,7 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
 </main>
 
 <aside class="side" id="recherche"><h3>Rechercher dans le site</h3><input id="q" type="search" placeholder="Condensateur, ondes, filtres…" aria-label="Rechercher dans le site">
-<h3>Les simulations</h3><ul><li data-k="Le condensateur et le dipôle RC"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/capacite.html" style="--d:#DCE8F5">Le condensateur et le dipôle RC</a></li><li data-k="La bobine et le dipôle RL"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/inductance.html" style="--d:#DCE8F5S">La bobine et le dipôle RL</a></li><li data-k="Oscillations électriques libres, entretenues et forcées"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/index.html" style="--d:#DCE8F5">Oscillations électriques libres, entretenues et forcées</a></li><li data-k="Oscillations électriques libres, entretenues et forcées"><a href="https://chrifmd.github.io/mecanique/sys_meca.html" style="--d:#FBE0D0">Oscillations mécaniques libres et forcées</a></li><li data-k="Propagation d’une onde le long d'une corde"><a href="https://chrifmd.github.io/onde/onde_corde" style="--d:#2BA3D4">Propagation d’une onde le long d'une corde</a></li><li data-k="Propagation d’une onde à la surface de l’eau"><a href="https://chrifmd.github.io/onde/index" style="--d:#2BA3D4">Propagation d’une onde à la surface de l’eau</a></li><li data-k="Propagation d’une onde à sonore"><a href="https://chrifmd.github.io/onde/onde_sonore" style="--d:#2BA3D4">Propagation d’une onde sonore</a></li><li data-k="Diffraction d'une onde d’une onde"><a href="https://chrifmd.github.io/interactions/diffraction" style="--d:#2BA3D4">Diffraction d'une onde</a></li><li data-k="Réflexion,réfraction et dispertion"><a href="https://chrifmd.github.io/interactions/reflex_refrac_disp" style="--d:#2BA3D4">Réflexion,réfraction et dispertion d'une onde</a></li><li data-k="Quantification de l’énergie"><a href="https://chrifmd.github.io/Quantification/accueil" style="--d:#3DAA5B">Quantification de l’énergie, spectres atomiques et radioactivité</a></li><li data-k="Les filtres"><a href="https://chrifmd.github.io/filtres/index" style="--d:#B454B0">Les filtres</a></li><li data-k="Les multivibrateurs"><a href="https://chrifmd.github.io/multivibrateurs/" style="--d:#D9A400">Les multivibrateurs</a></li>  <li><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/C_N_A_n_bits"style="--d:#E2F0D9"">Convertsseur CNA à n bits</a></li> <li><a href="https://chrifmd.github.io/onde/modulation"style="--d:#FCE4D6">modulation et démodulation</a></li><li data-k="TP Cinétique chimique"><a href="https://chrifmd.github.io/Chimie/tp_cinetique" style="--d:#1FA89A">TP Cinétique chimique</a></li><li data-k="TP Facteurs Cinétique "><a href="https://chrifmd.github.io/Chimie/cinetique" style="--d:#1FA89A">TP Facteurs cinétiques</a></li><li data-k="TP Réaction d’estérification"><a href="https://chrifmd.github.io/Chimie/esterification" style="--d:#7C6BD6">TP Réaction d’estérification</a></li><li data-k="acides_bases"><a href="https://chrifmd.github.io/Chimie/acide_base" style="--d:#b1d66b">Forces des acides et des bases</a></li><li data-k="TP pH des solutions acides"><a href="https://chrifmd.github.io/Chimie/pH_cc_acide" style="--d:#b1d66b">TP pH des solutions aqueuses acides</a></li><li data-k="TP pH des solutions bases"><a href="https://chrifmd.github.io/Chimie/pH_cc_base" style="--d:#b1d66b">TP pH des solutions aqueuses basiques</a></li></li><li data-k="TP dosage acide par base"><a href="https://chrifmd.github.io/Chimie/base_par_acide" style="--d:#b1d66b">TP Dosage d'un acide par une base forte</a></li></li><li data-k="TP dosage base par acide"><a href="https://chrifmd.github.io/Chimie/base_par_acide" style="--d:#b1d66b">TP dosage d'une base par un acide fort</a></li></ul>
+<h3>Les simulations</h3><ul><li data-k="Le condensateur et le dipôle RC"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/capacite.html" style="--d:#DCE8F5">Le condensateur et le dipôle RC</a></li><li data-k="La bobine et le dipôle RL"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/inductance.html" style="--d:#DCE8F5S">La bobine et le dipôle RL</a></li><li data-k="Oscillations électriques libres, entretenues et forcées"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/index.html" style="--d:#DCE8F5">Oscillations électriques libres, entretenues et forcées</a></li><li data-k="Oscillations électriques libres, entretenues et forcées"><a href="https://chrifmd.github.io/mecanique/sys_meca.html" style="--d:#FBE0D0">Oscillations mécaniques libres et forcées</a></li><li data-k="Propagation d’une onde le long d'une corde"><a href="https://chrifmd.github.io/onde/onde_corde" style="--d:#2BA3D4">Propagation d’une onde le long d'une corde</a></li><li data-k="Propagation d’une onde à la surface de l’eau"><a href="https://chrifmd.github.io/onde/index" style="--d:#2BA3D4">Propagation d’une onde à la surface de l’eau</a></li><li data-k="Propagation d’une onde à sonore"><a href="https://chrifmd.github.io/onde/onde_sonore" style="--d:#2BA3D4">Propagation d’une onde sonore</a></li><li data-k="Diffraction d'une onde d’une onde"><a href="https://chrifmd.github.io/interactions/diffraction" style="--d:#2BA3D4">Diffraction d'une onde</a></li><li data-k="Réflexion,réfraction et dispertion"><a href="https://chrifmd.github.io/interactions/reflex_refrac_disp" style="--d:#2BA3D4">Réflexion,réfraction et dispertion d'une onde</a></li><li data-k="Quantification de l’énergie"><a href="https://chrifmd.github.io/Quantification/accueil" style="--d:#3DAA5B">Quantification de l’énergie, spectres atomiques et radioactivité</a></li><li data-k="Les filtres"><a href="https://chrifmd.github.io/filtres/index" style="--d:#B454B0">Les filtres</a></li><li data-k="Les multivibrateurs"><a href="https://chrifmd.github.io/multivibrateurs/" style="--d:#D9A400">Les multivibrateurs</a></li>  <li><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/C_N_A_n_bits"style="--d:#E2F0D9"">Convertsseur CNA à n bits</a></li> <li><a href="https://chrifmd.github.io/onde/modulation"style="--d:#FCE4D6">modulation et démodulation</a></li><li data-k="TP Cinétique chimique"><a href="https://chrifmd.github.io/Chimie/tp_cinetique" style="--d:#1FA89A">TP Cinétique chimique</a></li><li data-k="TP Facteurs Cinétique "><a href="https://chrifmd.github.io/Chimie/cinetique" style="--d:#1FA89A">TP Facteurs cinétiques</a></li><li data-k="TP Réaction d’estérification"><a href="https://chrifmd.github.io/Chimie/esterification" style="--d:#7C6BD6">TP Réaction d’estérification</a></li><li data-k="acides_bases"><a href="https://chrifmd.github.io/Chimie/acide_base" style="--d:#b1d66b">Forces des acides et des bases</a></li><li data-k="TP pH des solutions acides"><a href="https://chrifmd.github.io/Chimie/pH_cc_acide" style="--d:#b1d66b">TP pH des solutions aqueuses acides</a></li><li data-k="TP pH des solutions bases"><a href="https://chrifmd.github.io/Chimie/pH_cc_base" style="--d:#b1d66b">TP pH des solutions aqueuses basiques</a></li></li><li data-k="TP dosage acide par base"><a href="https://chrifmd.github.io/Chimie/base_par_acide" style="--d:#b1d66b">TP Dosage d'un acide par une base forte</a></li></li><li data-k="TP dosage base par acide"><a href="https://chrifmd.github.io/Chimie/base_par_acide" style="--d:#b1d66b">TP dosage d'une base par un acide fort</a></li><li data-k="Conductimétrie"><a href="https://chrifmd.github.io/Chimie/conductimetrie" style="--d:#C4E3F7">Conductimétrie</a></li><li data-k="Piles électrochimiques"><a href="https://chrifmd.github.io/Chimie/pile-daniell" style="--d:#FFD9A8">Piles électrochimiques</a></li><li data-k="Électrolyses"><a href="https://chrifmd.github.io/Chimie/electrolyses" style="--d:#F8C8DC">Électrolyses</a></li></ul>
 </a></div></div>
 
 <footer>
@@ -277,6 +293,9 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
   </div>
 </footer>
 
+<!-- Bouton retour en haut de page -->
+<button type="button" id="to-top" class="to-top" aria-label="Remonter en haut de la page" title="Haut de page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
 <!-- Composant d'acceptation des cookies -->
 <div id="cookie-banner" class="cookie-banner" style="display:none;">
   <p>Ce site utilise des cookies (comme Flag Counter) pour mesurer l'audience et améliorer votre expérience de navigation.</p>
@@ -290,6 +309,18 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
 // Script de recherche
 const n=s=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),q=document.getElementById("q"),it=[...document.querySelectorAll("[data-k]")];
 q.addEventListener("input",()=>{const v=n(q.value.trim());let c=0;it.forEach(e=>{const m=!v||n(e.dataset.k+" "+e.textContent).includes(v);e.hidden=!m;if(m)c++});document.getElementById("none").hidden=c>0||!v});
+
+// Script du bouton retour en haut
+(function(){
+  const b=document.getElementById('to-top');
+  const toggle=()=>b.classList.toggle('show',window.scrollY>400);
+  window.addEventListener('scroll',toggle,{passive:true});toggle();
+  b.addEventListener('click',()=>{
+    const calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:calm?'auto':'smooth'});
+    document.querySelector('.logo').focus({preventScroll:true});
+  });
+})();
 
 // Script de gestion des cookies
 (function(){
