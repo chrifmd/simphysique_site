@@ -105,6 +105,13 @@ img {
     width: 50px;
     height: auto;
 }
+/* Newsletter */
+.nl{background:linear-gradient(120deg,#E4EEF9,#D3EAEF)}
+.nl form{max-width:560px}
+.nl .opt{font-weight:400;color:var(--mut);font-size:15px}
+.nl .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:15px;color:var(--mut)}
+.nl .chk input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--teal)}
+.nl .fine{font-size:14px;color:var(--mut);margin-top:4px}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-rc" viewBox="0 0 48 48"><path d="M4 24h9l3-8 6 16 6-16 3 8h13"/></symbol>
@@ -164,7 +171,7 @@ img {
   <div class="ticker">
     <span>✨ **Dernière mise à jour :** Ajout des similateurs convertisseur CNA à n bits et modulation et démodulation d'amplitude pour la section informatiques· </span>
     <span>✨**Dernière mise à jour :** Ajout des similateurs: Réactions acide-base - des quiz sur tous les thèmes traités. · </span>
-    <span>✨ **Dernière mise à jour :** Ajout des similateurs: Conductimétrie, piles électrochimiques et électrolyses . · </span>
+    <span>✨ **Dernière mise à jour :** Ajout des similateurs: onde progressive le long d'une corde; mise à jour de l'onde à la surface de l'eau, onde sonore et interactions onde-matière. · </span>
     <span>✨ **Dernière mise à jour :** Cours interactif : noyau atomique, radioactivité, fission et fusion. · </span>
        <span>🚀 Explorez dès maintenant toutes les simulations interactives de physique et de chimie pour les classes terminales ! · </span>
     <span>✨ **Dernière mise à jour :** Intégration d'un plan de site complet, correctif des icônes de simulations et ajout d'un bandeau de consentement aux cookies. · </span>
@@ -275,6 +282,16 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
 .catch(function(){m.style.color='#C0392B';m.textContent='Désolé, l’envoi a échoué. Réessayez plus tard ou écrivez-moi à chrif.md@gmail.com.'})
 .finally(function(){b.disabled=false})})})();
 </script></section>
+
+<section class="panel nl" id="newsletter"><h2>Recevoir les nouveautés</h2><p>Inscription facultative : un e-mail occasionnel quand une nouvelle simulation ou un nouveau cours est ajouté. Pas besoin de compte pour utiliser le site.</p>
+<form id="nf" action="https://buttondown.com/api/emails/embed-subscribe/chrifmd" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/chrifmd','popupwindow');setTimeout(function(){document.getElementById('nf').reset()},500)">
+<label>Prénom <span class="opt">(facultatif)</span><input type="text" name="metadata__prenom" autocomplete="given-name"></label>
+<label>Adresse e-mail<input type="email" name="email" required autocomplete="email"></label>
+<input type="hidden" value="1" name="embed">
+<label class="chk"><input type="checkbox" name="consent" value="oui" required><span>J’accepte de recevoir la newsletter de Simphysique. Je peux me désinscrire à tout moment grâce au lien présent dans chaque e-mail.</span></label>
+<div><button class="btn" type="submit">Je m’inscris</button></div>
+<p class="fine">Après l’inscription, une fenêtre s’ouvre pour confirmer votre adresse : pensez à cliquer sur le lien reçu par e-mail (vérifiez aussi vos courriers indésirables). Votre adresse n’est utilisée que pour la newsletter et n’est jamais partagée.</p></form>
+</section>
 </main>
 
 <aside class="side" id="recherche"><h3>Rechercher dans le site</h3><input id="q" type="search" placeholder="Condensateur, ondes, filtres…" aria-label="Rechercher dans le site">
@@ -287,6 +304,7 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
     <nav>
       <a href="#plan-du-site">Plan du site</a> · 
       <a href="#qui-suis-je">À propos</a> · 
+      <a href="#newsletter">Newsletter</a> · 
       <a href="#commentaire">Contact</a>
     </nav>
     <span><a href="https://info.flagcounter.com/dwc0"><img src="https://s05.flagcounter.com/count2/dwc0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" style="width: 180px; height: auto;"></a></span>
