@@ -1,4 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://simphysique.tn/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- SITE PRINCIPAL -->
+  <url>
+    <loc>https://simphysique.tn/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- PHYSIQUE -->
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/capacite.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/induction.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/inductance.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/index.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/mecanique/sys_meca.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/onde_corde</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/index</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/onde_sonore</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/interactions/diffraction</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/interactions/reflex_refrac_disp</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Quantification/accueil</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/filtres/index</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/multivibrateurs/</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/C_N_A_n_bits</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/modulation</loc>
+  </url>
+
+  <!-- CHIMIE -->
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/tp_cinetique</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/cinetique</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/esterification</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/index</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/conductimetrie</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/pile-daniell</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/electrolyses</loc>
+  </url>
+
 </urlset>
+sitemaps.azurewebsites.net - /schemas/sitemap/0.9/
+Kebir
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <!-- SITE PRINCIPAL -->
+  <url>
+    <loc>https://simphysique.tn/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- PHYSIQUE -->
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/capacite.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/induction.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/inductance.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/index.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/mecanique/sys_meca.html</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/onde_corde</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/index</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/onde_sonore</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/interactions/diffraction</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/interactions/reflex_refrac_disp</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Quantification/accueil</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/filtres/index</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/multivibrateurs/</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/sys_electriques/sys_electriques/C_N_A_n_bits</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/onde/modulation</loc>
+  </url>
+
+  <!-- CHIMIE -->
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/tp_cinetique</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/cinetique</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/esterification</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/index</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/conductimetrie</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/pile-daniell</loc>
+  </url>
+  <url>
+    <loc>https://chrifmd.github.io/Chimie/electrolyses</loc>
+  </url>
+
+</urlset>
+
