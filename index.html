@@ -1,7 +1,38 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simphysique — Accueil</title>
+<title>Simphysique — Simulations de physique et chimie en ligne, terminale (Tunisie)</title>
+<meta name="description" content="Simphysique : simulations interactives de physique et de chimie en ligne pour les classes terminales (Tunisie) : dipôle RC, RL, oscillations, ondes, physique atomique, cinétique chimique, piles, électrolyse.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Mohamed Chérif">
+<meta name="theme-color" content="#0B7A71">
+<link rel="canonical" href="https://simphysique.tn/">
+<link rel="alternate" hreflang="fr-TN" href="https://simphysique.tn/">
+<link rel="alternate" hreflang="x-default" href="https://simphysique.tn/">
+<link rel="icon" href="./favicon.ico" sizes="32x32">
+<link rel="icon" href="./favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_TN">
+<meta property="og:site_name" content="Simphysique">
+<meta property="og:title" content="Simphysique — Simulations de physique et chimie, terminale">
+<meta property="og:description" content="Modifiez les paramètres, observez le résultat en direct : simulations interactives de physique et de chimie pour les classes terminales.">
+<meta property="og:url" content="https://simphysique.tn/">
+<meta property="og:image" content="https://simphysique.tn/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo SimPhysique : ordinateur, atome, prisme et aimant — Simulez, Explorez, Comprenez">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simphysique — Simulations de physique et chimie, terminale">
+<meta name="twitter:description" content="Simulations interactives de physique et de chimie pour les classes terminales (Tunisie).">
+<meta name="twitter:image" content="https://simphysique.tn/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://simphysique.tn/#website","url":"https://simphysique.tn/","name":"Simphysique","alternateName":["Sim Physique","simphysique.tn"],"description":"Simphysique : simulations interactives de physique et de chimie en ligne pour les classes terminales (Tunisie) : dipôle RC, RL, oscillations, ondes, physique atomique, cinétique chimique, piles, électrolyse.","inLanguage":"fr-TN","publisher":{"@id":"https://simphysique.tn/#auteur"}},
+{"@type":"Person","@id":"https://simphysique.tn/#auteur","name":"Mohamed Chérif","jobTitle":"Professeur de sciences physiques","url":"https://simphysique.tn/","email":"chrif.md@gmail.com","image":"https://simphysique.tn/ma_photo.jpg","worksFor":{"@type":"Organization","name":"Simphysique","url":"https://simphysique.tn/","logo":"https://simphysique.tn/logo.png"}},
+{"@type":"CollectionPage","@id":"https://simphysique.tn/#page","url":"https://simphysique.tn/","name":"Simphysique — Simulations de physique et de chimie pour la terminale","isPartOf":{"@id":"https://simphysique.tn/#website"},"about":["Physique","Chimie","Simulations interactives","Baccalauréat tunisien"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"inLanguage":"fr-TN","primaryImageOfPage":"https://simphysique.tn/og-image.png"},
+{"@type":"SoftwareApplication","name":"SomNote","operatingSystem":"Android","applicationCategory":"EducationApplication","url":"https://play.google.com/store/apps/details?id=com.chrifmd.somnote","offers":{"@type":"Offer","price":"0","priceCurrency":"TND"}}
+]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0E1726;--mut:#4A5A75;--teal:#0B7A71;--mint:#4FD1C5;--line:#D5DEEB}
@@ -12,7 +43,7 @@ a{color:inherit;text-decoration:none}p{margin:0}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 .top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding:20px 0}
-.logo{font-weight:700;font-size:24px}.logo span{color:var(--teal)}
+.logo{font-weight:700;font-size:24px;display:inline-flex;align-items:center;gap:.4em}.mark{width:1.5em;height:1.5em;flex:none;border-radius:22%;object-fit:cover;box-shadow:0 2px 6px rgba(14,23,38,.25)}.banner h1{display:flex;align-items:center;gap:.3em}.logo .brand,.banner h1 .brand{color:var(--ink)}.banner h1 .mark{width:1.2em;height:1.2em}.logo span{color:var(--teal)}
 nav{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}nav a{color:var(--mut)}nav a:hover{color:var(--ink)}
 .btn{background:var(--mint);color:var(--ink)!important;font-weight:500;padding:10px 20px;border-radius:8px;border:0;font:inherit;cursor:pointer}
 .banner{background:linear-gradient(120deg,#E4EEF9,#D3EAEF);border:1px solid var(--line);border-radius:24px;display:grid;grid-template-columns:auto minmax(220px,1fr) minmax(300px,1.5fr);gap:28px;align-items:center;padding:24px 32px;overflow:hidden}
@@ -138,7 +169,7 @@ img {
 </defs></svg>
 
 <div class="wrap">
-<header class="top"><a class="logo" href="#">sim<span>physique</span></a>
+<header class="top"><a class="logo" href="/" aria-label="Simphysique — retour à l’accueil"><img class="mark" src="./logo-icon.png" width="48" height="48" alt="" decoding="async"><span class="brand">Sim<span>Physique</span></span></a>
 <nav aria-label="Principales rubriques">
   <a href="#simulations">Simulations</a>
   <a href="#physique">Physique</a>
@@ -151,8 +182,8 @@ img {
 </nav></header>
 <!-- Présentation du site (Bannière) -->
 <section class="banner" aria-label="Bannière">
-<img class="photo" style="width: 150px; height: 150px;" src="./ma_photo.jpg" alt="Portrait de l’auteur du site">
-<div><h1>sim<span>physique</span></h1><p>Simulations de physique et de chimie pour les classes terminales.</p></div>
+<img class="photo" width="150" height="150" src="./ma_photo.jpg" alt="Mohamed Chérif, professeur de sciences physiques et auteur de Simphysique" fetchpriority="high" decoding="async">
+<div><h1><img class="mark" src="./logo-icon.png" width="48" height="48" alt="" decoding="async"><span class="brand">Sim<span>Physique</span></span></h1><p>Simulations de physique et de chimie pour les classes terminales.</p></div>
 <svg class="fig" viewBox="0 0 640 200" role="img" aria-label="Ondes à la surface de l’eau, dosage colorimétrique avec burette et erlenmeyer, et deux oscillations amorties">
 <g fill="none" stroke="#0B7A71" stroke-width="2.5"><circle class="rip" cx="90" cy="100" r="64"/><circle class="rip" style="animation-delay:-1.5s" cx="90" cy="100" r="64"/><circle class="rip" style="animation-delay:-3s" cx="90" cy="100" r="64"/></g>
 <g class="dosage" fill="none" stroke="#4A5A75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -172,7 +203,7 @@ img {
 <div class="ticker-wrap" aria-label="Nouveautés de la mise à jour">
   <div class="ticker">
     <span>✨ **Dernière mise à jour :** Ajout des similateurs convertisseur CNA à n bits et modulation et démodulation d'amplitude pour la section informatiques· </span>
-   ✨**Dernière mise à jour :** Ajout cours iteractif : induction électromagétique et aut-induction. · </span>
+   ✨**Dernière mise à jour :** Ajout cours iteractif : induction électromagétique et auto-induction. · </span>
     <span>✨**Dernière mise à jour :** Ajout des exercices interactifs avec vérification des résultats par des simulateurs. · </span>
    <span>✨**Dernière mise à jour :** Ajout des similateurs: coductimétrie, piles électrochimiques et électrolyses.· </span>
     <span>✨**Dernière mise à jour :** 📬 Nouveau ! Une newsletter est disponible : inscrivez-vous (facultatif) pour être prévenu(e) des nouvelles simulations et des nouveaux cours. </span>
@@ -217,7 +248,7 @@ img {
 <p id="none" hidden>Aucune simulation ne correspond à votre recherche.</p></section>
 
 <h3 style="color: #012741;">Application android:</h3>
-<h3><p><img src="images/icone.png" alt="Application SomNote" ></p></h3> SomNote est une application très utile pour les collègues au cours de la correction d'un devoir ainsi que le suivi de l'évolution des élèves. Cliquez sur: <ul><li data-k="Cliquez sur ce lien SomNote"><a href="https://play.google.com/store/apps/details?id=com.chrifmd.somnote" style="--d:#5B8FC9"> <h3 style="color: #3498db;">SomNote</h3></a></li></ul>
+<p><img src="images/icone.png" alt="Icône de l’application Android SomNote pour la correction des devoirs" width="96" height="96" loading="lazy" decoding="async"></p> SomNote est une application très utile pour les collègues au cours de la correction d'un devoir ainsi que le suivi de l'évolution des élèves. Cliquez sur: <ul><li data-k="Cliquez sur ce lien SomNote"><a href="https://play.google.com/store/apps/details?id=com.chrifmd.somnote" style="--d:#5B8FC9"> <h3 style="color: #3498db;">SomNote</h3></a></li></ul>
 <br>
 
 <section class="panel rub" id="rubriques"><h2>Autres rubriques </h2><p>De quoi réviser et enseigner autour des simulations.</p>
@@ -305,14 +336,14 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
 
 <footer>
   <div class="wrap">
-    <span>© Simphysique</span>
+    <span>© SimPhysique</span>
     <nav>
       <a href="#plan-du-site">Plan du site</a> · 
       <a href="#qui-suis-je">À propos</a> · 
       <a href="#newsletter">Newsletter</a> · 
       <a href="#commentaire">Contact</a>
     </nav>
-    <span><a href="https://info.flagcounter.com/dwc0"><img src="https://s05.flagcounter.com/count2/dwc0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" style="width: 180px; height: auto;"></a></span>
+    <span><a href="https://info.flagcounter.com/dwc0"><img src="https://s05.flagcounter.com/count2/dwc0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Compteur de visiteurs par pays" loading="lazy" border="0" style="width: 180px; height: auto;"></a></span>
   </div>
 </footer>
 
