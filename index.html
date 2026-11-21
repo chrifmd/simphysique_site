@@ -145,6 +145,12 @@ img {
 .nl .fine{font-size:14px;color:var(--mut);margin-top:4px}
 .btn-nl{background:transparent;border:2px solid var(--teal);color:var(--teal)!important;padding:8px 18px}
 .btn-nl:hover{background:var(--teal);color:#fff!important}
+.share{max-width:1100px;margin:32px auto 0;padding:18px 20px;text-align:center;border-top:1px solid var(--line)}
+.share h2{font-size:18px;margin:0 0 12px;color:var(--ink)}
+.share-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;margin:0;padding:0}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:0;background:var(--c,#0B7A71);color:#fff;font:600 14px/1 inherit;font-family:inherit;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.share-btn:hover,.share-btn:focus-visible{transform:translateY(-2px);box-shadow:0 4px 10px rgba(14,23,38,.25)}
+.share-btn b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.22);font-size:12px}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-rc" viewBox="0 0 48 48"><path d="M4 24h9l3-8 6 16 6-16 3 8h13"/></symbol>
@@ -203,7 +209,7 @@ img {
 <div class="ticker-wrap" aria-label="Nouveautés de la mise à jour">
   <div class="ticker">
     <span>✨ **Dernière mise à jour :** Ajout des similateurs convertisseur CNA à n bits et modulation et démodulation d'amplitude pour la section informatiques· </span>
-   ✨**Dernière mise à jour :** Ajout cours iteractif : induction électromagétique et auto-induction. · </span>
+   ✨**Dernière mise à jour :** Ajout cours iteractif : induction électromagétique et aut-induction. · </span>
     <span>✨**Dernière mise à jour :** Ajout des exercices interactifs avec vérification des résultats par des simulateurs. · </span>
    <span>✨**Dernière mise à jour :** Ajout des similateurs: coductimétrie, piles électrochimiques et électrolyses.· </span>
     <span>✨**Dernière mise à jour :** 📬 Nouveau ! Une newsletter est disponible : inscrivez-vous (facultatif) pour être prévenu(e) des nouvelles simulations et des nouveaux cours. </span>
@@ -334,6 +340,36 @@ fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:
 <h3>Les simulations</h3><ul><li data-k="Le condensateur et le dipôle RC"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/capacite.html" style="--d:#DCE8F5">Le condensateur et le dipôle RC</a></li><li data-k="Le condensateur et le dipôle RC"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/induction.html" style="--d:#DCE8F5">Induction électromagnétique et auto-induction</a></li><li data-k="La bobine et le dipôle RL"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/inductance.html" style="--d:#DCE8F5S">La bobine et le dipôle RL</a></li><li data-k="Oscillations électriques libres, entretenues et forcées"><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/index.html" style="--d:#DCE8F5">Oscillations électriques libres, entretenues et forcées</a></li><li data-k="Oscillations électriques libres, entretenues et forcées"><a href="https://chrifmd.github.io/mecanique/sys_meca.html" style="--d:#FBE0D0">Oscillations mécaniques libres et forcées</a></li><li data-k="Propagation d’une onde le long d'une corde"><a href="https://chrifmd.github.io/onde/onde_corde" style="--d:#2BA3D4">Propagation d’une onde le long d'une corde</a></li><li data-k="Propagation d’une onde à la surface de l’eau"><a href="https://chrifmd.github.io/onde/index" style="--d:#2BA3D4">Propagation d’une onde à la surface de l’eau</a></li><li data-k="Propagation d’une onde à sonore"><a href="https://chrifmd.github.io/onde/onde_sonore" style="--d:#2BA3D4">Propagation d’une onde sonore</a></li><li data-k="Diffraction d'une onde d’une onde"><a href="https://chrifmd.github.io/interactions/diffraction" style="--d:#2BA3D4">Diffraction d'une onde</a></li><li data-k="Réflexion,réfraction et dispertion"><a href="https://chrifmd.github.io/interactions/reflex_refrac_disp" style="--d:#2BA3D4">Réflexion,réfraction et dispertion d'une onde</a></li><li data-k="Quantification de l’énergie"><a href="https://chrifmd.github.io/Quantification/accueil" style="--d:#3DAA5B">Quantification de l’énergie, spectres atomiques et radioactivité</a></li><li data-k="Les filtres"><a href="https://chrifmd.github.io/filtres/index" style="--d:#B454B0">Les filtres</a></li><li data-k="Les multivibrateurs"><a href="https://chrifmd.github.io/multivibrateurs/" style="--d:#D9A400">Les multivibrateurs</a></li>  <li><a href="https://chrifmd.github.io/sys_electriques/sys_electriques/C_N_A_n_bits"style="--d:#E2F0D9"">Convertsseur CNA à n bits</a></li> <li><a href="https://chrifmd.github.io/onde/modulation"style="--d:#FCE4D6">modulation et démodulation</a></li><li data-k="TP Cinétique chimique"><a href="https://chrifmd.github.io/Chimie/tp_cinetique" style="--d:#1FA89A">TP Cinétique chimique</a></li><li data-k="TP Facteurs Cinétique "><a href="https://chrifmd.github.io/Chimie/cinetique" style="--d:#1FA89A">TP Facteurs cinétiques</a></li><li data-k="TP Réaction d’estérification"><a href="https://chrifmd.github.io/Chimie/esterification" style="--d:#7C6BD6">TP Réaction d’estérification</a></li><li data-k="acides_bases"><a href="https://chrifmd.github.io/Chimie/acide_base" style="--d:#b1d66b">Forces des acides et des bases</a></li><li data-k="TP pH des solutions acides"><a href="https://chrifmd.github.io/Chimie/pH_cc_acide" style="--d:#b1d66b">TP pH des solutions aqueuses acides</a></li><li data-k="TP pH des solutions bases"><a href="https://chrifmd.github.io/Chimie/pH_cc_base" style="--d:#b1d66b">TP pH des solutions aqueuses basiques</a></li></li><li data-k="TP dosage acide par base"><a href="https://chrifmd.github.io/Chimie/base_par_acide" style="--d:#b1d66b">TP Dosage d'un acide par une base forte</a></li></li><li data-k="TP dosage base par acide"><a href="https://chrifmd.github.io/Chimie/base_par_acide" style="--d:#b1d66b">TP dosage d'une base par un acide fort</a></li><li data-k="Conductimétrie"><a href="https://chrifmd.github.io/Chimie/conductimetrie" style="--d:#C4E3F7">Conductimétrie</a></li><li data-k="Piles électrochimiques"><a href="https://chrifmd.github.io/Chimie/pile-daniell" style="--d:#FFD9A8">Piles électrochimiques</a></li><li data-k="Électrolyses"><a href="https://chrifmd.github.io/Chimie/electrolyses" style="--d:#F8C8DC">Électrolyses</a></li></ul>
 </a></div></div>
 
+<section class="share" aria-labelledby="partager">
+<h2 id="partager">Partager SimPhysique</h2>
+<ul class="share-list">
+<li><a class="share-btn" id="sh-fb" style="--c:#1877F2" target="_blank" rel="noopener noreferrer"><b>f</b>Facebook</a></li>
+<li><a class="share-btn" id="sh-wa" style="--c:#128C7E" target="_blank" rel="noopener noreferrer"><b>W</b>WhatsApp</a></li>
+<li><a class="share-btn" id="sh-x" style="--c:#111" target="_blank" rel="noopener noreferrer"><b>X</b>X (Twitter)</a></li>
+<li><a class="share-btn" id="sh-li" style="--c:#0A66C2" target="_blank" rel="noopener noreferrer"><b>in</b>LinkedIn</a></li>
+<li><a class="share-btn" id="sh-tg" style="--c:#229ED9" target="_blank" rel="noopener noreferrer"><b>T</b>Telegram</a></li>
+<li><a class="share-btn" id="sh-mail" style="--c:#6B7280"><b>@</b>E-mail</a></li>
+<li><button class="share-btn" id="sh-copy" type="button" style="--c:#0B7A71"><b>⧉</b><span>Copier le lien</span></button></li>
+<li><button class="share-btn" id="sh-native" type="button" style="--c:#7C3AED" hidden><b>↗</b>Plus…</button></li>
+</ul>
+</section>
+<script>
+(function(){
+var u='https://simphysique.tn/',t='SimPhysique — Simulations de physique et chimie, terminale',
+e=encodeURIComponent,U=e(u),T=e(t),s=function(i,v){var a=document.getElementById(i);if(a)a.href=v};
+s('sh-fb','https://www.facebook.com/sharer/sharer.php?u='+U);
+s('sh-wa','https://wa.me/?text='+e(t+' '+u));
+s('sh-x','https://twitter.com/intent/tweet?url='+U+'&text='+T);
+s('sh-li','https://www.linkedin.com/sharing/share-offsite/?url='+U);
+s('sh-tg','https://t.me/share/url?url='+U+'&text='+T);
+s('sh-mail','mailto:?subject='+T+'&body='+e('Découvre ces simulations interactives : '+u));
+var c=document.getElementById('sh-copy');
+c.onclick=function(){var l=c.querySelector('span');function ok(){l.textContent='Lien copié ✓';setTimeout(function(){l.textContent='Copier le lien'},2000)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(ok,function(){prompt('Copiez ce lien :',u)})}else{prompt('Copiez ce lien :',u)}};
+var n=document.getElementById('sh-native');
+if(navigator.share){n.hidden=false;n.onclick=function(){navigator.share({title:t,url:u}).catch(function(){})}}
+})();
+</script>
 <footer>
   <div class="wrap">
     <span>© SimPhysique</span>
